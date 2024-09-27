@@ -1,63 +1,32 @@
 import { useState } from "react";
 import initialFriends from "./data";
+import FriendsList from "./components/FriendsList";
+import FormAddFriend from "./components/FormAddFriend";
+import FormSplitBill from "./components/FormSplitBill";
 
 function App() {
-  const [toggleAddFriend, setToggleAddFriend] = useState(false);
+  const [toggleAddFriend, setToggleAddFriend] = useState(true);
+  const [friends, setFriends] = useState(initialFriends);
 
   const showAddFriend = () => {
     setToggleAddFriend((currentValue) => !currentValue);
   };
 
-  const bill = 200;
+  const handleAddFriend = (friend) => {
+    setFriends((currentFriends) => [...currentFriends, friend]);
+  };
+
   return (
     <div className="app">
       <div className="friendsbar">
         <div className="friendsList">
-          <ul>
-            {initialFriends.map((friend) => (
-              <li key={friend.id}>
-                <img src={friend.image} alt={friend.name} />
-                <h3>{friend.name}</h3>
-                <p>{friend.balance}</p>
-                <button>Add</button>
-              </li>
-            ))}
-          </ul>
+          <FriendsList friends={friends} />
         </div>
         <button onClick={showAddFriend}>Add new Friend</button>
-        {toggleAddFriend && (
-          <div className="form-add-friend">
-            <form>
-              <h2>Add Friend</h2>
-              <label>Friend Name</label>
-              <input type="text" placeholder="friendName" />
-              <label>Friend Image</label>
-              <input type="text" placeholder="Friend image" />
-              <button>Add</button>
-            </form>
-          </div>
-        )}
+        {toggleAddFriend && <FormAddFriend onAddFriend={handleAddFriend} />}
       </div>
       <div className="splitbillbar">
-        <form>
-          <h2>SPlit Bill</h2>
-          <label>Bill Amount</label>
-          <input type="text" placeholder="Enter Bill amount" />
-          <label>Your expenses</label>
-          <input type="text" placeholder="Your expenses" />
-          <label>Friends Expenses</label>
-          <input
-            type="text"
-            placeholder="Friends Expenses"
-            disabled
-            value={bill}
-          />
-          <select>
-            <option value="MyExpenses">Me</option>
-            <option value="FriendsExpenses">Friend</option>
-          </select>
-          <button>Split Bill</button>
-        </form>
+        <FormSplitBill />
       </div>
     </div>
   );
