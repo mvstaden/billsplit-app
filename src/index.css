@@ -51,3 +51,9 @@ ul {
   border: 2px solid blue;
   background-color: cadetblue;
 }
+.form-split-bill {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 1.2rem;
+}
