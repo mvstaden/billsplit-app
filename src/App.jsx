@@ -4,6 +4,7 @@ import FriendsList from "./components/FriendsList";
 import FormAddFriend from "./components/FormAddFriend";
 import FormSplitBill from "./components/FormSplitBill";
 
+
 function App() {
   const [toggleAddFriend, setToggleAddFriend] = useState(true);
   const [friends, setFriends] = useState(initialFriends);
