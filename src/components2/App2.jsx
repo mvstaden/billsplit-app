@@ -1,7 +1,7 @@
 // import { useState } from "react";
 import "./App2.css";
-import Balance from "./components2/Balance";
-import Header from "./components2/Header";
+import Balance from "./Balance";
+import Header from "./Header";
 // import initialFriends from "./data";
 
 const App2 = () => {

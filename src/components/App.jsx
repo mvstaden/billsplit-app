@@ -1,9 +1,8 @@
 import { useState } from "react";
-import initialFriends from "./data";
-import FriendsList from "./components/FriendsList";
-import FormAddFriend from "./components/FormAddFriend";
-import FormSplitBill from "./components/FormSplitBill";
-
+import initialFriends from "../data";
+import FriendsList from "../components2/FriendsList";
+import FormAddFriend from "./FormAddFriend";
+import FormSplitBill from "./FormSplitBill";
 
 function App() {
   const [toggleAddFriend, setToggleAddFriend] = useState(true);
