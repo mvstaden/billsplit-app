@@ -6,7 +6,6 @@ import initialFriends from "./data";
 const App = () => {
   return (
     <div className="h-screen flex items-center justify-center ">
-        <div className="flex items-center justify-evenly gap-2">
       <div className="bg-white rounded-t-2xl">
         <div className="p-4 min-w-96">
           <Header />
