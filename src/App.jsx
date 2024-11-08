@@ -1,20 +1,34 @@
-import Header from "./components/Header";
-import Navbar from "./components/Navbar";
-import RecentFriends from "./components/RecentFriends";
-import RecentsSplits from "./components/RecentsSplits";
-import SelectedBill from "./components/SelectedBill";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./layouts/Layout";
+import { Home, LandingPage, Settings, Account } from "./pages";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "landingpage",
+        element: <LandingPage />,
+      },
+      {
+        path: "settings",
+        element: <Settings />,
+      },
+      {
+        path: "account",
+        element: <Account />,
+      },
+    ],
+  },
+]);
 
 const App = () => {
-  return (
-    <div className="bg-black w-96 mx-auto text-white p-5 rounded-2xl relative">
-      <Header />
-      <SelectedBill />
-      <RecentFriends />
-      <h1 className="text-xl mb-4">Recent Splits</h1>
-      <RecentsSplits />
-      <Navbar />
-    </div>
-  );
+  return <RouterProvider router={router}></RouterProvider>;
 };
 
 export default App;

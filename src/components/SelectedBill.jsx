@@ -2,16 +2,16 @@ import initialFriends from "../data";
 import { GiCommercialAirplane } from "react-icons/gi";
 const SelectedBill = () => {
   return (
-    <div className="bg-red-900 w-full px-2 rounded-2xl bg-opacity-75  border-2 border-red-800 flex items-center justify-between h-40 mb-6">
-      <div className=" flex flex-col justify-center items-center ">
-        <h2 className="text-xl ">Split With</h2>
+    <div className="bg-red-900 w-full px-2 rounded-2xl bg-opacity-75  border-2 border-red-800 flex items-center  h-40 mb-6">
+      <div className=" flex-1 ">
+        <h2 className="text-2xl ">Split With</h2>
         <div className="flex ml-0 my-3">
           {initialFriends.map((friend) => (
             <img
               key={friend.name}
               src={friend.image}
               alt={friend.name}
-              className="h-8 w-8 flex rounded-full -ml-4"
+              className="h-8 w-8 rounded-full"
             />
           ))}
         </div>

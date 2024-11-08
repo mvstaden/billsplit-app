@@ -2,7 +2,7 @@ import initialFriends from "../data";
 
 const RecentFriends = () => {
   return (
-    <div className="w-full p-3 rounded-2xl   border-2 border-red-800 border-dashed  justify-between h-36 mb-6">
+    <div className="w-full p-3 rounded-2xl   border-2 border-red-800 border-dashed  justify-between h-36 mb-4">
       <div className="flex items-center justify-between">
         <h2>Recent Friends</h2>
         <p>See all</p>
