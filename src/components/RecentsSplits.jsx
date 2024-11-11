@@ -15,7 +15,7 @@ const RecentsSplits = () => {
         <div className="flex ml-0 my-3">
           {initialFriends.map((friend) => (
             <img
-              key={friend.name}
+              key={friend.id}
               src={friend.image}
               alt={friend.name}
               className="h-9 w-() flex rounded-full -ml-4"

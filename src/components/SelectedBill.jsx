@@ -8,7 +8,7 @@ const SelectedBill = () => {
         <div className="flex ml-0 my-3">
           {initialFriends.map((friend) => (
             <img
-              key={friend.name}
+              key={friend.id}
               src={friend.image}
               alt={friend.name}
               className="h-8 w-8 rounded-full"
