@@ -1,8 +1,58 @@
-import initialFriends from "../data";
-import { GiCommercialAirplane } from "react-icons/gi";
-const SelectedBill = () => {
-  return (
-    <div className="bg-red-900 w-full px-2 rounded-2xl bg-opacity-75  border-2 border-red-800 flex items-center  h-40 mb-6">
+.selectedBill {
+  background-color: #3d0202;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 2px solid #c34242;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 160px;
+  margin-bottom: 24px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info h2 {
+  font-size: 23px;
+}
+.info img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.info button {
+  background-color: #c34242;
+  padding: 0.7rem 1.3rem;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.balance {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  border-radius: 20px;
+  border: 2px dashed rgba(189, 132, 132, 0.482);
+  padding: 0.7rem;
+
+  text-align: center;
+}
+.balance h4 {
+  font-size: 16px;
+}
+.balance .total {
+  font-size: 23px;
+  font-weight: bold;
+}
+/* 
       <div className=" flex-1 ">
         <h2 className="text-2xl ">Split With</h2>
         <div className="flex ml-0 my-3">
@@ -28,8 +78,4 @@ const SelectedBill = () => {
         </span>
         <p className="text-xs">Design Tour</p>
       </div>
-    </div>
-  );
-};
-
-export default SelectedBill;
+    </div> */

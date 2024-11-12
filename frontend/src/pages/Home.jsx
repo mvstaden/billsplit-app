@@ -2,7 +2,7 @@ import Header from "../components/Header/Header";
 import Navbar from "../components/Navbar";
 import RecentFriends from "../components/RecentFriends";
 import RecentsSplits from "../components/RecentsSplits";
-import SelectedBill from "../components/SelectedBill";
+import SelectedBill from "../components/SelectedBill/SelectedBill";
 
 const Home = () => {
   return (

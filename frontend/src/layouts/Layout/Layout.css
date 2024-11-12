@@ -3,9 +3,10 @@
 </div> */
 .layout {
   background: linear-gradient(to bottom right, #000, #1d323e);
-  border-radius: 30px;
+  border-radius: 20px;
   min-width: 100%;
   width: 400px;
+
   min-height: 100%;
   display: flex;
   flex-direction: column;
