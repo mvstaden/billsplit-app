@@ -1,8 +1,9 @@
 import { Outlet } from "react-router-dom";
+import "./Layout.css";
 
 const Layout = () => {
   return (
-    <div className="bg-black w-[350px]  mx-auto text-white p-5 mt-2 rounded-2xl relative min-h-[676px]">
+    <div className="layout">
       <Outlet />
     </div>
   );

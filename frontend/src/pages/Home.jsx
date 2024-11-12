@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import Navbar from "../components/Navbar";
 import RecentFriends from "../components/RecentFriends";
 import RecentsSplits from "../components/RecentsSplits";
@@ -9,9 +9,9 @@ const Home = () => {
     <>
       <Header />
       <SelectedBill />
-      <RecentFriends />
+      {/* <RecentFriends />
       <h1 className="text-xl mb-4">Recent Splits</h1>
-      <RecentsSplits />
+      <RecentsSplits /> */}
       <Navbar />
     </>
   );

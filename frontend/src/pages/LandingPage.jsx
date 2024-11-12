@@ -8,7 +8,7 @@ const LandingPage = () => {
         <h1 className="text-6xl text-center">Great way to split your bill</h1>
         <img src="https" alt="" />
         <Link
-          to="/"
+          to="/home"
           className="bg-slate-400 w-full text-center py-4 px-4 rounded-full">
           Get started
         </Link>
