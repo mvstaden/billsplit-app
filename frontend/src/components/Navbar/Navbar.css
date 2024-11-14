@@ -1,12 +1,57 @@
-import { MdHomeFilled } from "react-icons/md";
-import { IoWallet } from "react-icons/io5";
-import { HiUserGroup } from "react-icons/hi2";
-import { FaBell } from "react-icons/fa";
-import { CiCirclePlus } from "react-icons/ci";
-import { Link } from "react-router-dom";
-const Navbar = () => {
-  return (
-    <div className=" w-full h-16 flex items-center justify-between  relative">
+.navbar {
+  width: 100%;
+  height: 3.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.left-b,
+.right-b {
+  position: absolute;
+  border: 1px solid rgba(234, 179, 8, 0.2);
+}
+.right-b {
+  top: 6px;
+  width: 137px;
+  right: 0;
+}
+.left-b {
+  top: 6px;
+  width: 137px;
+  left: 0;
+}
+/* absolute  cursor-pointer rounded-full -top-8 h-24 w-24 text-yellow-200 hover:shadow-md hover:shadow-yellow-200 */
+.link-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.link-add {
+  position: absolute;
+  bottom: -2rem;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  border-top: 1px solid rgba(234, 179, 8, 0.4);
+
+  /* border-top-right-radius: 50%; */
+}
+.navbar-links {
+  height: 2rem;
+  width: 2rem;
+  margin-top: 0.75rem;
+}
+.navbar-link {
+  width: 2rem;
+  height: 2rem;
+  padding: 3px;
+  cursor: pointer;
+}
+
+/* 
+<div className=" w-full h-16 flex items-center justify-between  relative">
       <div className="absolute border-t border-opacity-45 border-yellow-200 h-1 w-[120px] top-2 right-0"></div>
       <div className="absolute border-t border-yellow-200 h-1 w-[120px] border-opacity-45 top-2 "></div>
       <div className="w-8 h-8 mt-3">
@@ -38,8 +83,4 @@ const Navbar = () => {
           />
         </Link>
       </div>
-    </div>
-  );
-};
-
-export default Navbar;
+    </div> */

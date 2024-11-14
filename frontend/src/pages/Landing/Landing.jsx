@@ -11,8 +11,7 @@ const Landing = () => {
         <h1>Splitty</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
-          veritatis sit autem neque natus et repudiandae, quasi consectetur
-          veniam vero.
+          veritatis sit autem neque natus et repudiandae.
         </p>
         <Link to="/home" className="btn btn-started">
           Get started
