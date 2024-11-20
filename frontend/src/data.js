@@ -26,4 +26,3 @@ const initialFriends = [
 ];
 
 export default initialFriends;
-
