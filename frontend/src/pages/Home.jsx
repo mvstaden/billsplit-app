@@ -1,14 +1,15 @@
 import Header from "../components/Header";
 import { GiCommercialAirplane } from "react-icons/gi";
 import { FaPlus } from "react-icons/fa6";
-import initialFriends from "../data";
+
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import UserIcon from "../components/UserIcon";
+
+import { useAppContext } from "../context/AppContext";
+
 const Home = () => {
-  const [friends, setFriends] = useState(initialFriends);
+  const { friends } = useAppContext();
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-5 relative">
       <Header />
 
       {/* Split Bill Section */}
@@ -25,7 +26,7 @@ const Home = () => {
               />
             ))}
           </div>
-      
+
           <Link className="bg-[#FFDD62] text-black py-2 rounded-full text-center">
             Split Now
           </Link>
@@ -51,10 +52,11 @@ const Home = () => {
         <div className="flex items-center justify-center gap-2 mt-2 flex-wrap">
           {friends.map((friend) => (
             <div key={friend.id}>
+              <p>{friend.firstName}</p>
               <img
                 src={friend.image}
                 alt={friend.name}
-                className="rounded-full"
+                className="rounded-full w-12 h-12 object-cover object-top"
               />
             </div>
           ))}

@@ -1,14 +1,20 @@
 import { createContext, useEffect, useContext, useRef, useState } from "react";
+import initialFriends from "../data";
 
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
+  const [friends, setFriends] = useState(initialFriends);
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const handleToggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
+  };
+
+  const handleAddFriend = (friend) => {
+    setFriends((currentFriends) => [...currentFriends, friend]);
   };
 
   // Toggle dropdown visibility
@@ -44,6 +50,8 @@ export const AppProvider = ({ children }) => {
         setIsSearchOpen,
         handleToggleSearch,
         toggleDropdown,
+        friends,
+        handleAddFriend,
       }}>
       {children}
     </AppContext.Provider>
