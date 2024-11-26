@@ -5,7 +5,7 @@ const Landing = () => {
     <div className="h-full flex flex-col gap-4 items-center md:flex-row p-4">
       <h1 className="text-6xl text-center pb-4">Splitty</h1>
       <img src={landingImage} className="h-56 w-56" alt="" />
-      <div className=" flex-1 px-14 text-center">
+      <div className=" flex-1 px-8 text-center">
         <h1 className="text-4xl text-center mb-3">
           Great way to split your bill
         </h1>

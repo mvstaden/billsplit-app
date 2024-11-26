@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { Landing, Home } from "./pages";
 import Layout from "./layouts/Layout";
+import AddFriendForm from "./components/AddFriendForm";
 <Layout />;
 
 const App = () => {
@@ -17,6 +18,10 @@ const App = () => {
         {
           path: "/home",
           element: <Home />,
+        },
+        {
+          path: "/add-friend",
+          element: <AddFriendForm />,
         },
 
         // {
