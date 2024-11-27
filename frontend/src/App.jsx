@@ -4,6 +4,7 @@ import { Landing, Home } from "./pages";
 import Layout from "./layouts/Layout";
 import AddFriendForm from "./components/AddFriendForm";
 import Friends from "./pages/Friends";
+import BillSplit from "./pages/BillSplit";
 <Layout />;
 
 const App = () => {
@@ -27,6 +28,10 @@ const App = () => {
         {
           path: "/friends",
           element: <Friends />,
+        },
+        {
+          path: "/bill-split",
+          element: <BillSplit />,
         },
 
         // {

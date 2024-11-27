@@ -31,7 +31,7 @@ const AddFriendForm = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="flex items-center justify-between relative">
         <Link to="/home">
           <FaArrowLeftLong className="w-5 h-5 ml-3" />
@@ -39,7 +39,7 @@ const AddFriendForm = () => {
         <h2 className="text-2xl">Add Friend</h2>
         <UserIcon />
       </div>
-      <form className="flex flex-col gap-3 p-4" onSubmit={onAddFriendSubmit}>
+      <form className="flex flex-col gap-3 p-2" onSubmit={onAddFriendSubmit}>
         <div>
           <label htmlFor="name" className="text-gray-600">
             First Name
@@ -86,7 +86,7 @@ const AddFriendForm = () => {
           Add Friend
         </button>
       </form>
-    </div>
+    </>
   );
 };
 export default AddFriendForm;

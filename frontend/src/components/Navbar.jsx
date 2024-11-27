@@ -12,24 +12,24 @@ const Navbar = () => {
 
           <span>
             <Link to="/home">
-              <FaHome className="w-6 h-6 " />
+              <FaHome className="w-6 h-6 text-gray-600 cursor-pointer" />
             </Link>
           </span>
           <span>
-            <FaWallet className="w-6 h-6 " />
+            <FaWallet className="w-6 h-6 text-gray-600 cursor-pointer" />
           </span>
           <span className="">
-            <Link to="/addFriend">
+            <Link to="/add-Friend">
               <GoPlus className=" absolute rounded-full bg-[#FFDD62] p-3 left-[41%] -top-8 text-black cursor-pointer h-16 w-16" />
             </Link>
           </span>
           <span>
             <Link to="/friends">
-              <FaUserGroup className="cursor-pointer w-6 h-6 " />
+              <FaUserGroup className="cursor-pointer w-6 h-6 text-gray-600" />
             </Link>
           </span>
           <span>
-            <FaBell className="w-6 h-6 " />
+            <FaBell className="w-6 h-6 text-gray-600 cursor-pointer" />
           </span>
         </div>
       </nav>
