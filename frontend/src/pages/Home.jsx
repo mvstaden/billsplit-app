@@ -28,7 +28,7 @@ const Home = () => {
 
           <Link
             className="bg-[#FFDD62] text-black py-2 rounded-full text-center"
-            to="/bill-split">
+            to="/home/bill-split">
             Split Now
           </Link>
         </div>

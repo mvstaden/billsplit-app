@@ -5,32 +5,32 @@ import Layout from "./layouts/Layout";
 import AddFriendForm from "./components/AddFriendForm";
 import Friends from "./pages/Friends";
 import BillSplit from "./pages/BillSplit";
-<Layout />;
 
 const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
+      element: <Landing />,
+    },
+    {
+      path: "/home",
       element: <Layout />,
       children: [
         {
           index: true,
-          element: <Landing />,
-        },
-        {
-          path: "/home",
           element: <Home />,
         },
+
         {
-          path: "/add-friend",
+          path: "add-friend",
           element: <AddFriendForm />,
         },
         {
-          path: "/friends",
+          path: "friends",
           element: <Friends />,
         },
         {
-          path: "/bill-split",
+          path: "bill-split",
           element: <BillSplit />,
         },
 
@@ -47,5 +47,13 @@ const App = () => {
   ]);
   return <RouterProvider router={router}></RouterProvider>;
 };
+
+// const App = () => {
+//   return (
+//     <Routes>
+//       <Route />
+//     </Routes>
+//   );
+// };
 
 export default App;

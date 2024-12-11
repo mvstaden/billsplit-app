@@ -11,7 +11,7 @@ const Home = () => {
       <Header />
       <SelectedBill />
       <RecentFriends />
-   
+
       <RecentSplits />
       <Navbar />
     </>
