@@ -1,14 +1,15 @@
 import Header from "../components/Header";
 import { GiAirplaneDeparture } from "react-icons/gi";
-
+import { CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
 import { useAppContext } from "../context/AppContext";
+import Navbar from "../components/Navbar";
 
 const Home = () => {
   const { friends } = useAppContext();
   return (
-    <div className="flex flex-col gap-5 relative">
+    <div className="flex flex-col gap-5 relative h-full">
       <Header />
 
       {/* Split Bill Section */}
@@ -28,7 +29,7 @@ const Home = () => {
 
           <Link
             className="bg-[#FFDD62] text-black py-2 rounded-full text-center"
-            to="/home/bill-split">
+            to="/bill-split">
             Split Now
           </Link>
         </div>
@@ -40,6 +41,7 @@ const Home = () => {
           <p className="text-sm">Design Tour</p>
         </div>
       </section>
+      <Navbar />
     </div>
   );
 };

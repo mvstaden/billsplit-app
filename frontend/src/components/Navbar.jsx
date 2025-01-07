@@ -4,8 +4,8 @@ import { GoPlus } from "react-icons/go";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
-    <footer className="absolute bottom-0 left-0 p-3  w-full">
-      <nav className=" relative p-3">
+    <footer className="absolute bottom-0 left-0 + w-full">
+      <nav className=" relative p-2">
         <div className="flex justify-between ">
           <div className="absolute border-t opacity-40 border-gray-400 w-[136px] -left-2 -top-1"></div>
           <div className="absolute border-t opacity-40 border-gray-400 w-[136px] -right-2 -top-1"></div>

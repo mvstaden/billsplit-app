@@ -51,6 +51,7 @@ export const AppProvider = ({ children }) => {
         handleToggleSearch,
         toggleDropdown,
         friends,
+        
         handleAddFriend,
       }}>
       {children}

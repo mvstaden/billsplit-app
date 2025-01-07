@@ -1,19 +1,20 @@
-import { CiSearch } from "react-icons/ci";
-
+import { Link } from "react-router-dom";
 import UserIcon from "./UserIcon";
+import { CiSearch } from "react-icons/ci";
 
 const Header = () => {
   return (
     <header className="flex items-center gap-2 justify-between">
-      <div className="flex items-center rounded-full">
-        <CiSearch className="h-10 w-10 border border-gray-500 rounded-full p-1 text-white ml-1 cursor-pointer" />
-
+      <Link to="/home">
+        <h2 className="text-2xl">Splitty</h2>
+      </Link>
+      <div className="relative flex items-center justify-center bg-white p-1 rounded-md">
         <input
-          type="text"
-          className=" border-none outline-none bg-transparent w-28 p-1 bg-white hidden"
+          className="bg-transparent ml-4 outline-none  w-[85%] text-black"
+          placeholder="Search"
         />
+        <CiSearch className="absolute text-2xl top-1 text-blue-500 left-0 " />
       </div>
-      <h2 className="text-2xl">Splitty</h2>
       <UserIcon />
     </header>
   );

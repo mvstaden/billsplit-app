@@ -8,7 +8,9 @@ import { useState } from "react";
 const BillSplit = () => {
   const [payAmount, setPayAmount] = useState(0);
   const [bill, setBill] = useState(535);
+
   const { friends } = useAppContext();
+
   return (
     <div className="w-full h-[75%]">
       <div className="flex items-center justify-between mb-5 ">

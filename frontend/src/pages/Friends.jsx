@@ -2,20 +2,19 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaUserEdit } from "react-icons/fa";
 import { TbMessage } from "react-icons/tb";
 import { Link } from "react-router-dom";
-import UserIcon from "../components/UserIcon";
+
 import { useAppContext } from "../context/AppContext";
+import Header from "../components/Header";
+import { useState } from "react";
 
 const Friends = () => {
   const { friends } = useAppContext();
+  
+
   return (
     <div className="w-full h-[75%] ">
       <div className="flex items-center justify-between relative ">
-        <Link to="/home">
-          <FaArrowLeftLong className="w-5 h-5 ml-3" />
-        </Link>
-        <h2 className="text-2xl">Friends</h2>
-
-        <UserIcon />
+        <Header href="/home" heading="Friends" icon={FaArrowLeftLong} />
       </div>
       <div className="flex flex-col gap-4 overflow-scroll no-scrollbar h-full mt-5 p-2">
         {friends.map((friend) => (
