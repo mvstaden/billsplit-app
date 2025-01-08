@@ -34,11 +34,45 @@ export const register = async (req, res) => {
       email,
       password: hashedPassword,
     });
-    generateToken(newUser.id, res);
-    await newUser.save();
-    res.status(200).send({ message: "Registration Successfull" });
+    if (newUser) {
+      generateToken(newUser.id, res);
+      await newUser.save();
+      res.status(200).send({ message: "Registration Successfull" });
+    } else {
+      res.status(400).send({ message: "Invalid credentials" });
+    }
   } catch (error) {
     console.log(`Error registering user:${error.message}`);
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
+export const login = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const user = await User.findOne({ email });
+    const isPassword = await bcrypt.compare(password, user.password);
+    if (!user || !isPassword) {
+      return res.status(400).json({ message: "Invalid Credentials" });
+    }
+
+    generateToken(user._id, res);
+    res.status(200).json({
+      message: "Login Successfull",
+      data: user,
+    });
+  } catch (error) {
+    console.log("Error login user", error.message);
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
+export const logout = async (req, res) => {
+  try {
+    res.cookie("auth_token", { maxAge: 0 });
+    res.send("Logout successfull");
+  } catch (error) {
+    console.log("Error logging out", error.message);
     res.status(500).json({ message: "Server error" });
   }
 };
